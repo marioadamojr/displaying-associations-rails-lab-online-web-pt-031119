@@ -27,7 +27,7 @@ class SongsController < ApplicationController
   def update
     @song = Song.find(params[:id])
 
-    @song.update(song_params)
+    @song.update(song_params(:title))
 
     if @song.save
       redirect_to @song
